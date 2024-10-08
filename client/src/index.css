@@ -1,68 +1,160 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Open+Sans:wght@300;400;500;600;700;800&family=Phudu:wght@300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.blueCol{
+    /* background: #0041F5; */
+    background: #3803FF;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.blueCol:hover{
+    background: #1F00B3;
 }
-a:hover {
-  color: #535bf2;
+.blueColTxt:hover{
+    color: #0041F5;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.blueColTxt2{
+    color: #0041F5;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.LinkLog:hover{
+    background: #1F00B3;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.blueColBorder{
+    
+    border-color: #3803FF;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+
+*{
+    font-family: 'Open Sans', sans-serif ;
+}
+
+.underL{
+    text-decoration-color: #EAB308;
+}
+.underPur{
+    text-decoration-color: #3803FF;
+}
+
+.borBLue{
+    border-color: #0041F5;
+}
+
+.titleT{
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+
+.bold-placeholder::placeholder {
+    font-weight:500; /* Make the placeholder text bold */
+    color: gray; /* You can also adjust the color if needed */
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+
+.zInd{
+    z-index: 1000;
 }
+
+
+.blueCol2{
+    /* background: #0041F5; */
+    background: #3803FF;
+}
+
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+
+.loader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background-image:
+      linear-gradient(#FFF 16px, transparent 0) ,
+      linear-gradient(#3803FF 16px, transparent 0) ,
+      linear-gradient(#3803FF 16px, transparent 0) ,
+      linear-gradient(#FFF 16px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left top , left bottom , right top , right bottom;
+    animation: rotate 1s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      width: 64px;
+      height: 64px;
+      transform: rotate(0deg)
+    }
+    50% {
+      width: 30px;
+      height: 30px;
+      transform: rotate(180deg)
+    }
+    100% {
+      width: 64px;
+      height: 64px;
+      transform: rotate(360deg)
+    }
+  }
+
+
+  .cool-link {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #EAB308 ;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+
+
+.loader1 {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    margin:15px auto;
+    position: relative;
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    box-sizing: border-box;
+    animation: shadowPulse 2s linear infinite;
+  }
+  
+  @keyframes shadowPulse {
+    33% {
+      background: #FFF;
+      box-shadow: -24px 0 #3803FF, 24px 0 #FFF;
+    }
+    66% {
+      background: #3803FF;
+      box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    }
+    100% {
+      background: #FFF;
+      box-shadow: -24px 0 #FFF, 24px 0 #3803FF;
+    }
+  }
+  
